@@ -19,28 +19,21 @@ A research project for working with LibreChat - an open-source ChatGPT alternati
 
 ## Getting Started
 
-1. **Navigate to the compose directory:**
-   ```bash
-   cd compose
-   ```
+Run Docker Compose commands from the project root using the `-f` flag:
 
-2. **Start LibreChat:**
-   ```bash
-   docker compose up -d
-   ```
+```bash
+# Start LibreChat
+docker compose -f compose/docker-compose.yml up -d
 
-3. **View logs:**
-   ```bash
-   docker compose logs -f
-   ```
+# View logs
+docker compose -f compose/docker-compose.yml logs -f
 
-4. **Stop LibreChat:**
-   ```bash
-   docker compose down
-   ```
+# Stop LibreChat
+docker compose -f compose/docker-compose.yml down
+```
 
-5. **Access LibreChat:**
-   Open your browser and navigate to `http://localhost:3080`
+**Access LibreChat:**
+Open your browser and navigate to `http://localhost:3080`
 
 ## Configuration
 
