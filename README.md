@@ -22,6 +22,31 @@ A research project for working with LibreChat - an open-source ChatGPT alternati
 - Docker Engine 20.10+
 - Docker Compose (v2.0+) - use `docker compose`
 
+## Setup
+
+1. **Configure environment variables:**
+
+   Create or update `compose/.env` file with required variables:
+   ```bash
+   # Create .env file with basic configuration
+   cat > compose/.env << EOF
+   PORT=3080
+   RAG_PORT=8000
+   UID=1000
+   GID=1000
+   JWT_SECRET=$(openssl rand -base64 32)
+   OPENAI_API_KEY=your_openai_api_key_here
+   MEILI_MASTER_KEY=
+   EOF
+   ```
+
+   Or add JWT_SECRET to existing .env file:
+   ```bash
+   echo "JWT_SECRET=$(openssl rand -base64 32)" >> compose/.env
+   ```
+
+2. **All required directories are already created** with `.gitkeep` files to maintain the structure.
+
 ## Getting Started
 
 Run Docker Compose commands from the project root:
