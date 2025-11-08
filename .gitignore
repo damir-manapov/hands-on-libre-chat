@@ -1,10 +1,16 @@
 # Docker
-data/
+compose/data/
+compose/data-node/
 *.log
+compose/logs/
+compose/uploads/
+compose/images/
+compose/meili_data_v1.12/
 
 # Environment files
 .env
 .env.local
+compose/.env
 
 # IDE
 .vscode/

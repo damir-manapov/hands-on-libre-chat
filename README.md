@@ -6,9 +6,14 @@ A research project for working with LibreChat - an open-source ChatGPT alternati
 
 ```
 .
-├── compose/           # Docker Compose configuration
-│   └── docker-compose.yml
-├── data/             # LibreChat data directory (created on first run)
+├── compose/           # Docker Compose configuration and data
+│   ├── docker-compose.yml
+│   ├── .env           # Environment variables (create from .env.example)
+│   ├── data-node/     # MongoDB data (created automatically)
+│   ├── logs/          # Application logs (created automatically)
+│   ├── uploads/       # User uploads (created automatically)
+│   ├── images/        # Images (created automatically)
+│   └── meili_data_v1.12/  # Meilisearch data (created automatically)
 └── README.md
 ```
 
@@ -19,7 +24,7 @@ A research project for working with LibreChat - an open-source ChatGPT alternati
 
 ## Getting Started
 
-Run Docker Compose commands from the project root using the `-f` flag:
+Run Docker Compose commands from the project root:
 
 ```bash
 # Start LibreChat
@@ -37,9 +42,9 @@ Open your browser and navigate to `http://localhost:3080`
 
 ## Configuration
 
-- The `data/` directory will be created automatically and contains LibreChat's persistent data
+- All data directories are created automatically under `compose/` when services start
+- Environment variables are configured in `compose/.env` file
 - To customize LibreChat, create a `librechat.yaml` file in the `compose/` directory
-- Environment variables can be set in the `docker-compose.yml` file or via a `.env` file
 
 ## Research Notes
 
