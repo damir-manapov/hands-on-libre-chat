@@ -1,0 +1,19 @@
+services:
+  librechat:
+    image: ghcr.io/danny-avila/librechat:latest
+    container_name: librechat
+    ports:
+      - "3080:3080"
+    environment:
+      - NODE_ENV=production
+    volumes:
+      - ./data:/app/data
+      - ./librechat.yaml:/app/librechat.yaml
+    restart: unless-stopped
+    networks:
+      - librechat-network
+
+networks:
+  librechat-network:
+    driver: bridge
+
