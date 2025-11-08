@@ -1,11 +1,16 @@
 # Docker
 compose/data/
-compose/data-node/
+compose/data-node/*
+!compose/data-node/.gitkeep
 *.log
-compose/logs/
-compose/uploads/
-compose/images/
-compose/meili_data_v1.12/
+compose/logs/*
+!compose/logs/.gitkeep
+compose/uploads/*
+!compose/uploads/.gitkeep
+compose/images/*
+!compose/images/.gitkeep
+compose/meili_data_v1.12/*
+!compose/meili_data_v1.12/.gitkeep
 
 # Environment files
 .env
